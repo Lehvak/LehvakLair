@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        #sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 60px;
+            bottom: 0;
+            overflow-y: auto;
+        }
+
+        #sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        #sidebar a:hover {
+            background-color: #4CAF50;
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 80px 20px 20px 20px;
+            text-align: center;
+            flex: 1;
+            max-width: 800px;
+            margin: 80px auto 20px auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-list {
+            width: fit-content;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .centered-list li {
+            margin-bottom: 15px;
+        }
+
+        .fuse-set {
+            color: black;
+        }
+
+        .fuse-set .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .fuse-set .highlight_2 {
+            color: blue;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+            }
+
+            section {
+                margin-left: 0;
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            header {
+                position: relative;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+
+        /* Align the second paragraph to the left */
+        .left-aligned {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Fuses</h1>
+    </header>
+
+    <div id="sidebar">
+        <h2>Topics</h2>
+        <a href="../index.html">Home</a>
+    </div>
+
+    <section>
+        <h2 id="topic1">Fuse Compare</h2>
+        <p>There are 3 main types of fuse sets defined by fuseline 01:</p>
+        <ul class="centered-list">
+            <li>
+                Retail
+                <br>
+                <span class="fuse-set">Fuseset 01: 0F0F0F0F0F0F<span class="highlight_2">F0</span><span class="highlight">F0</span></span>
+            </li>
+            <li>
+                Test
+                <br>
+                <span class="fuse-set">Fuseset 01: 0F0F0F0F0F0F<span class="highlight_2">F0</span><span class="highlight">0F</span></span>
+            </li>
+            <li>
+                Dev
+                <br>
+                <span class="fuse-set">Fuseset 01: 0F0F0F0F0F0F<span class="highlight_2">0F</span><span class="highlight">0F</span></span>
+            </li>
+        </ul>
+
+        <p class="left-aligned">
+            As we can tell from the above fuseline 01, in very simplistic terms, the last two bits signify what content the machine will be<br>
+            <span class="fuse-set"><span class="highlight">0F</span></span> being Dev signed<br>
+            <span class="fuse-set"><span class="highlight">F0</span> being Retail signed<br>
+            The two bits before will tell us if the system will have kernel debugging locked down.<br>
+			<span class="fuse-set"><span class="highlight_2">F0</span></span> = Locked down <br>
+			<span class="fuse-set"><span class="highlight_2">0F</span></span> = Unlocked<br>
+			With that being said, we can determine a Test kit is much closer to a Consumer retail, then to a dev kit. This explains why 
+			with internally the SKU tracking of some XDK group units, some units are referred to as "Retail" when they are running Test fuses.
+        </p>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lehvak Lair. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
