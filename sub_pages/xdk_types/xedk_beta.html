@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1d0bc;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: -10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        #sidebar {
+            width: 100px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 60px;
+            bottom: 0;
+            overflow-y: auto;
+        }
+
+        #sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        #sidebar a:hover {
+            background-color: #4CAF50;
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 80px 20px 100px 20px; /* Added padding at the bottom */
+            flex: 1;
+            max-width: 800px;
+            margin: 80px auto 20px auto;
+            text-align: center;
+        }
+
+        table.wikitable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid black; /* Table border color set to black */
+        }
+
+        table.wikitable th,
+        table.wikitable td {
+            border: 1px solid black; /* Cell borders set to black */
+            padding: 8px;
+        }
+
+        table.wikitable th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative; /* Changed from fixed to relative */
+            left: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-list {
+            width: fit-content;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 40px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 150px;
+            }
+
+            section {
+                margin-left: 150px;
+                padding: 80px 10px 100px 10px; /* Added padding at the bottom */
+            }
+        }
+
+        @media (max-width: 576px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                bottom: auto;
+                padding: 10px;
+            }
+
+            #sidebar a {
+                padding: 8px;
+                text-align: center;
+            }
+
+            section {
+                margin-left: 0;
+                padding: 80px 10px 100px 10px; /* Added padding at the bottom */
+                margin: 10px auto;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MTV</h1>
+    </header>
+
+    <div id="sidebar">
+        <h2>Topics</h2>
+        <a href="../../index.html">Home</a>
+    </div>
+
+    <section>
+        <p><strong>Note:</strong> Article under construction</p>
+
+        <h2>Unit Group</h2>
+        <p>Unit Group is known as XeDK, or Xenon Development Kit. Initial Release using EV4 Hardware. Units sent to game developers through the Partner Program to replace <a href="#alpha-units">Alpha hardware</a>.</p>
+
+        <h2 id="refresh-1">Refresh 1</h2>
+        <p>First beta refresh hardware sent to developers.</p>
+
+        <h3>Cosmetic Variations</h3>
+        <p>Either the large warning label and/or the FCC prototype label will not be present on the case.</p>
+
+        <h3>Known Configurations</h3>
+        <ul class="centered-list">
+            <li>XeDK-7A, build assembly: X803166-001.</li>
+            <li>XeDK-8C, build assembly: X803167-001.</li>
+            <li>XeDK-9E, build assembly: X803168-001.</li>
+        </ul>
+
+        <table class="wikitable">
+            <tr>
+                <th>Delivery</th>
+                <td>May 2005</td>
+            </tr>
+            <tr>
+                <th>Manufactured</th>
+                <td>Late 2004</td>
+            </tr>
+            <tr>
+                <th>Motherboard PCB</th>
+                <td><a href="#fab-g">X801054-007</a></td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>512MB</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>60GB <a href="#hard-drive">Hard Drive</a></td>
+            </tr>
+            <tr>
+                <th>Sidecar</th>
+                <td><a href="#prototype-version-1">Prototype Version 1</a></td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>Console: Light Black</td>
+            </tr>
+        </table>
+
+        <h2 id="refresh-2">Refresh 2</h2>
+        <h3>Known Configuration</h3>
+        <ul class="centered-list">
+            <li>XeDK DV</li>
+        </ul>
+
+        <table class="wikitable">
+            <tr>
+                <th>Delivery</th>
+                <td>Early 2005</td>
+            </tr>
+            <tr>
+                <th>Manufactured</th>
+                <td>Early 2005</td>
+            </tr>
+            <tr>
+                <th>Motherboard PCB</th>
+                <td><a href="#fab-h">X801054-008</a></td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>512MB</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>60GB <a href="#hard-drive">Hard Drive</a></td>
+            </tr>
+            <tr>
+                <th>Sidecar</th>
+                <td><a href="#prototype-version-2">Prototype Version 2</a></td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>Console: Black</td>
+            </tr>
+        </table>
+
+        <h2 id="refresh-3">Refresh 3</h2>
+        <h3>Known Configurations</h3>
+        <ul class="centered-list">
+            <li>XeDK-1, build assembly: X806033-001. 5700 units.</li>
+            <li>XeDK-2, build assembly: X806034-001. 7150 units.</li>
+        </ul>
+
+        <table class="wikitable">
+            <tr>
+                <th>Delivery</th>
+                <td>Mid 2005</td>
+            </tr>
+            <tr>
+                <th>Manufactured</th>
+                <td>August 2005</td>
+            </tr>
+            <tr>
+                <th>Motherboard PCB</th>
+                <td><a href="#fab-j">X803600-009</a></td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>512MB</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>60GB <a href="#hard-drive">Hard Drive</a></td>
+            </tr>
+            <tr>
+                <th>Sidecar</th>
+                <td>Early: <a href="#prototype-version-2">Prototype Version 2</a><br>Later: <a href="#type-1">Type 1</a></td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>Console: Dark Gray<br>Early Sidecar: Black<br>Later Sidecar: Light Grey</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lehvak Lair. All rights reserved

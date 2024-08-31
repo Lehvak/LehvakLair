@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other Page</title>
+    <title>MTV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,7 +37,7 @@
             padding: 15px;
             box-sizing: border-box;
             position: fixed;
-            top: 60px; /* Ensure it does not overlap the header */
+            top: 60px;
             bottom: 0;
             overflow-y: auto;
         }
@@ -55,12 +55,29 @@
         }
 
         section {
-            margin-left: 220px; /* Margin to the right of the sidebar */
-            padding: 80px 20px 20px 20px; /* Top padding increased to account for the header */
-            text-align: center;
+            margin-left: 220px;
+            padding: 80px 20px 20px 20px;
             flex: 1;
-            max-width: 800px; /* Limit the width of the section content */
-            margin: 80px auto 20px auto; /* Center the section content */
+            max-width: 800px;
+            margin: 80px auto 20px auto;
+            text-align: center;
+        }
+
+        table.wikitable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table.wikitable th, table.wikitable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table.wikitable th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
         }
 
         footer {
@@ -79,6 +96,16 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-list {
+            width: fit-content;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1, h2, h3 {
+            margin-top: 40px;
         }
 
         /* Media Queries */
@@ -118,25 +145,25 @@
                 position: relative;
             }
         }
-
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Other Page</h1>
+        <h1>XDK Program Units</h1>
     </header>
 
     <div id="sidebar">
         <h2>Topics</h2>
-        <a href="sub_pages/mtv_other_p1.html">MTV</a>
-		
+        <a href="../index.html">Home</a>
     </div>
 
     <section>
-        <h2 id="topic1">Welcome to the Other Page</h2>
-        <p>This is the Other page of the website, where we discuss different topics.</p>
+        <!-- New Headers with Links -->
+        <a href="xdk_types/xdk_alpha.html"><h1 id="alpha">Alpha</h1></a>
+        <a href="xdk_types/xedk_beta.html"><h1 id="beta">Beta</h1></a>
+        <a href="xdk_final.html"><h1 id="final">Final</h1></a>
     </section>
 
     <footer>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1d0bc;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: -10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        #sidebar {
+            width: 100px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 60px;
+            bottom: 0;
+            overflow-y: auto;
+        }
+
+        #sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        #sidebar a:hover {
+            background-color: #4CAF50;
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 80px 20px 100px 20px; /* Added padding at the bottom */
+            flex: 1;
+            max-width: 800px;
+            margin: 80px auto 20px auto;
+            text-align: center;
+        }
+
+        table.wikitable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid black; /* Table border color set to black */
+        }
+
+        table.wikitable th,
+        table.wikitable td {
+            border: 1px solid black; /* Cell borders set to black */
+            padding: 8px;
+        }
+
+        table.wikitable th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative; /* Changed from fixed to relative */
+            left: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-list {
+            width: fit-content;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 40px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 150px;
+            }
+
+            section {
+                margin-left: 150px;
+                padding: 80px 10px 100px 10px; /* Added padding at the bottom */
+            }
+        }
+
+        @media (max-width: 576px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                bottom: auto;
+                padding: 10px;
+            }
+
+            #sidebar a {
+                padding: 8px;
+                text-align: center;
+            }
+
+            section {
+                margin-left: 0;
+                padding: 80px 10px 100px 10px; /* Added padding at the bottom */
+                margin: 10px auto;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MTV</h1>
+    </header>
+
+    <div id="sidebar">
+        <h2>Topics</h2>
+        <a href="../../index.html">Home</a>
+    </div>
+
+    <section>
+        <!-- Implementing the content -->
+        <h2>Xenon Component Verification</h2>
+        <p>Series of break-out PCBs for individual components. Utilize Test Chips, such as the P-DIE test chip named XGPUMIKE.</p>
+
+        <h2>Xenon Engineering Verification 1</h2>
+
+        <h3>Power Mac G5</h3>
+
+        <h4>Internal Alpha XDK</h4>
+        <table class="wikitable">
+            <tr>
+                <th>Delivery</th>
+                <td>10/15/2003</td>
+            </tr>
+            <tr>
+                <th>Hardware Group</th>
+                <td>XeCV, XeEV1</td>
+            </tr>
+            <tr>
+                <th>Motherboard PCB</th>
+                <td>Apple PowerMac G5 820-1592-A</td>
+            </tr>
+            <tr>
+                <th>CPU</th>
+                <td>PowerPC 970 2.0GHz</td>
+            </tr>
+            <tr>
+                <th>GPU card (R300)</th>
+                <td>GeForce FX 5200 Ultra, ATI Radeon 9600</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>512MB (2x256) DDR 400MHz PC3200</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>80GB Hard Drive</td>
+            </tr>
+        </table>
+
+        <h4>Partner Alpha XDK</h4>
+        <table class="wikitable">
+            <tr>
+                <th>Pre-Order</th>
+                <td>1/15/2004</td>
+            </tr>
+            <tr>
+                <th>Delivery</th>
+                <td>2/09/2004 - 2/19/2004</td>
+            </tr>
+            <tr>
+                <th>Hardware Group</th>
+                <td>XeEV1</td>
+            </tr>
+            <tr>
+                <th>Motherboard PCB</th>
+                <td>Apple PowerMac G5 820-1592-A</td>
+            </tr>
+            <tr>
+                <th>CPU</th>
+                <td>Initially: PowerPC 970 2.0GHz<br>Post-June: Dual PowerPC 970/970FX 2.0GHz</td>
+            </tr>
+            <tr>
+                <th>RAM</th>
+                <td>512MB (2x256) DDR 400MHz PC3200</td>
+            </tr>
+            <tr>
+                <th>Storage</th>
+                <td>160GB Hard Drive</td>
+            </tr>
+        </table>
+
+        <h3>Alpha XDK</h3>
+        <p>Commonly referred to by the community (but not by Microsoft) as "Alpha 1".</p>
+
+        <table class="wikitable">
+            <tr>
+                <th>GPU Card</th>
+                <td>ATI Radeon 9800 Pro Mac Edition</td>
+            </tr>
+            <tr>
+                <th>Video Memory</th>
+                <td>128MB</td>
+            </tr>
+        </table>
+
+        <h4>Notes</h4>
+        <ul class="centered-list">
+            <li>End of support: February 2005</li>
+        </ul>
+
+        <h3>Alpha XDK Refresh</h3>
+        <p>Commonly referred to by the community (but not by Microsoft) as "Alpha 2".</p>
+
+        <table class="wikitable">
+            <tr>
+                <th>GPU Card</th>
+                <td>ATI Radeon X800 XT Mac Edition</td>
+            </tr>
+            <tr>
+                <th>Video Memory</th>
+                <td>256MB</td>
+            </tr>
+        </table>
+
+        <h4>Notes</h4>
+        <ul class="centered-list">
+            <li>End of support: May 2005</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lehvak Lair. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
