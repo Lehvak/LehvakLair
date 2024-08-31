@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Basic Site</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1d0bc;
+            color: #333;
+        }
 
-      header {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-      }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-      nav {
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-      }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
 
-      nav a {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        text-align: center;
-      }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+        }
 
-      nav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-      section {
-        padding: 20px;
-        text-align: center;
-      }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
 
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-      }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px 15px;
+                flex-basis: 100%;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                padding: 8px 10px;
+            }
+
+            section {
+                padding: 10px;
+            }
+        }
 
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
 
     <header>
-      <h1>Lehvak Lair<a</h1>
+        <h1>Lehvak Lair</h1>
     </header>
 
     <nav>
-      <a href="#Home">Home</a>
-      <a href="Other_main.html">Other</a>
- <a href="XDK_main.html">XDK</a> <!-- Update this line -->      
- <a href="Internal">Internal</a>
+        <a href="#Home">Home</a>
+        <a href="Other_main.html">Other</a>
+        <a href="XDK_main.html">XDK</a>
+        <a href="Internal.html">Internal</a>
     </nav>
 
     <section id="home">
-      <h2>Home</h2>
-      <p>This is the homepage of my basic website. Feel free to explore!</p>
+        <h2>Home</h2>
+        <p>This is the homepage of my basic website. Feel free to explore!</p>
     </section>
 
     <footer>
-      <p>&copy; 2024 Lehvak Lair. All rights reserved.</p>
+        <p>&copy; 2024 Lehvak Lair. All rights reserved.</p>
     </footer>
 
-  </body>
+</body>
 
 </html>

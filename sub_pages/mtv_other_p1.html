@@ -10,11 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #d1d0bc;
+            color: black;
             display: flex;
-            min-height: 100vh;
             flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -31,7 +31,7 @@
         }
 
         #sidebar {
-            width: 200px;
+            width: 220px;
             background-color: #333;
             color: white;
             padding: 15px;
@@ -57,10 +57,10 @@
         section {
             margin-left: 220px; /* Margin to the right of the sidebar */
             padding: 80px 20px 20px 20px; /* Top padding increased to account for the header */
-            text-align: center;
             flex: 1;
             max-width: 800px; /* Limit the width of the section content */
             margin: 80px auto 20px auto; /* Center the section content */
+            text-align: center;
         }
 
         footer {
@@ -80,14 +80,50 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-	
+
         .centered-list {
             width: fit-content;
             margin: 0 auto;
             text-align: left;
         }
-    </style>
 
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 150px;
+            }
+
+            section {
+                margin-left: 150px;
+                padding: 80px 10px 20px 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                bottom: auto;
+                padding: 10px;
+            }
+
+            #sidebar a {
+                padding: 8px;
+                text-align: center;
+            }
+
+            section {
+                margin-left: 0;
+                padding: 80px 10px 20px 10px;
+                margin: 10px auto;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
     </style>
 </head>
 
@@ -97,25 +133,23 @@
         <h1>MTV</h1>
     </header>
 
-<div id="sidebar">
-    <h2>Topics</h2>
-    <a href="../index.html">Home</a>
-
+    <div id="sidebar">
+        <h2>Topics</h2>
+        <a href="../index.html">Home</a>
     </div>
 
     <section>
         <h2 id="topic1">What is the MTV label</h2>
         <p>Manufacturing test version for a specific batch or iteration of BOM (Build of Materials), the hardware product Identification label. Located by the fans on most PCBs, or towards the front
-		of the PCB behind the ROL in the designated skilscreen location.<br>
-		
-		It will give:</p>
-<ul class="centered-list">
-    <li>The internal part number that references the BOM and revision of BOM (if applicable).</li>
-    <li>MTV specific formatted serial</li>
-    <li>The name of the BOM, or ConfigID (if applicable)</li>
-	<li>Unit production number (if applicable)</li>
-</ul>
+            of the PCB behind the ROL in the designated silkscreen location.<br>
 
+            It will give:</p>
+        <ul class="centered-list">
+            <li>The internal part number that references the BOM and revision of BOM (if applicable).</li>
+            <li>MTV specific formatted serial</li>
+            <li>The name of the BOM, or ConfigID (if applicable)</li>
+            <li>Unit production number (if applicable)</li>
+        </ul>
     </section>
 
     <footer>

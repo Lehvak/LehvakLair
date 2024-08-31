@@ -10,11 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #d1d0bc;
+            color: black;
             display: flex;
-            min-height: 100vh;
             flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -31,7 +31,7 @@
         }
 
         #sidebar {
-            width: 200px;
+            width: 220px;
             background-color: #333;
             color: white;
             padding: 15px;
@@ -57,10 +57,10 @@
         section {
             margin-left: 220px; /* Margin to the right of the sidebar */
             padding: 80px 20px 20px 20px; /* Top padding increased to account for the header */
-            text-align: center;
             flex: 1;
             max-width: 800px; /* Limit the width of the section content */
             margin: 80px auto 20px auto; /* Center the section content */
+            text-align: center;
         }
 
         footer {
@@ -81,6 +81,44 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 150px;
+            }
+
+            section {
+                margin-left: 150px;
+                padding: 80px 10px 20px 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: auto;
+                bottom: auto;
+                padding: 10px;
+            }
+
+            #sidebar a {
+                padding: 8px;
+                text-align: center;
+            }
+
+            section {
+                margin-left: 0;
+                padding: 80px 10px 20px 10px;
+                margin: 10px auto;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+
     </style>
 </head>
 
@@ -95,7 +133,7 @@
         <a href="sub_pages/fuse_compare.html">Fuses</a>
         <a href="#topic2">XDK Program Units</a>
         <a href="#topic3">Dev vs Test</a>
-        <a href="#topic4">Demo vs Reveiwer kit</a>
+        <a href="#topic4">Demo vs Reviewer kit</a>
     </div>
 
     <section>
